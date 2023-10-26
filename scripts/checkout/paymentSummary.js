@@ -11,9 +11,9 @@ export function renderPaymentSummary(){
     cart.forEach((cartItem) => {
         const product = getProduct(cartItem.productId);
         producPriceCents += product.priceCents * cartItem.quantity;
-
-        const deliveryOption = getDeliveryOption(cartItem.getDeliveryOptionId);
-        shippingPriceCents += product.priceCents;
+        console.log(cartItem)
+        const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId);
+        shippingPriceCents += deliveryOption.priceCents;
 
     });
 
